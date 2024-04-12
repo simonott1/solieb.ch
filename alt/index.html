@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>TIE DREI</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Mal verspielt, mal schräg, irgendwo zwischen Pop und Jazz - Die Drei laden in ihre sonderbar-fabelhafte Klangwelt ein.">
+        <meta name="keywords" content="Bern,Drei,Jazz,Pop,Trio,Drei,Hannah Adriana Müller,Sonja Ott,Johanna Pärli,Kontrabass,Trompete,Gesang">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script>
+            var change_arrow_pos = 100;
+            window.onscroll = function(){scrolled()};
+            function scrolled(){
+                if ($(window).scrollTop() > change_arrow_pos){
+                    $('#arrow_img').attr("src", "image/logo/arrow_up.png");
+                    $('#arrow_href').attr("onclick", "scrolltostart();");
+                }else{
+                    $('#arrow_img').attr("src", "image/logo/arrow_down.png");
+                    $('#arrow_href').attr("onclick", "scrolltocontent();");
+                }
+            }
+
+            function scrolltocontent(){
+                $('html, body').animate({ scrollTop: (document.getElementById("content_container").style.top)}, 'slow');
+            };
+            function scrolltostart(){
+                $('html, body').animate({ scrollTop: (0)}, 'slow');
+            };
+
+
+            function switch_sound() { 
+                if(document.getElementById("bgvid").muted){
+                    bgvid.muted = false;
+                    document.getElementById("mute_button").src="image/logo/unmute.png";
+                }else{
+                    bgvid.muted = true;
+                    document.getElementById("mute_button").src="image/logo/muted.png";
+                } 
+            }
+        </script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <video autoplay loop muted id="bgvid">
+            <source data-src="video/interlude.webm" type="video/webm">
+            <source data-src="video/interlude.mp4" type="video/mp4">
+            <div id="background_novideo"></div>
+        </video>
+        <div id="logo_container">
+            <a href="https://soundcloud.com/tie_drei">
+                <img src="image/logo/soundcloud.png">
+            </a>
+            
+            <a href="https://www.instagram.com/tie_drei/">
+                <img src="image/logo/instagram.png">
+            </a>
+            
+            <a href="https://tiedrei.bandcamp.com/releases">
+                <img src="image/logo/bandcamp.png">
+            </a>
+            
+            <a href="https://itunes.apple.com/ch/album/plankton/1342356432">
+                <img src="image/logo/itunes.png">
+            </a>
+            
+            
+
+            <a href="https://www.facebook.com/DIEDREI.band/">
+                <img src="image/logo/facebook.png">
+            </a>
+
+
+            <a href="https://www.youtube.com/watch?v=lo67vt61hGM">
+                <img src="image/logo/youtube.png">
+            </a>
+            
+            <a href="#" onclick="switch_sound();" id="switch_sound_button">
+                <img id="mute_button" src="image/logo/muted.png">
+            </a>
+            
+
+        </div>
+
+        
+        
+        
+        
+        
+        <div id="content_container">
+            <div id="content_container_arrow">
+                <a href="#" onclick="scrolltocontent();" id="arrow_href">
+                    <img src="image/logo/arrow_down.png" id="arrow_img">
+                </a>
+            </div>
+            <div id="content_left">
+                <div id="concert_dates">
+                    nächste Konzerte:<br>
+                    <br>
+                    04.05.23 Ferme-Asile, Sion<br>
+                    09.05.23 alte Spitalkirche, Solothurn <br>
+                    17.05.23 Sternenkeller, Rüti <br>
+                    19.05.23 Le Singe, Biel <br>
+                    02.06.23 Helferei, Zürich <br>
+                    09.06.23 Münsterturm, Bejazz, Bern <br>
+                    24.06.23 Atelier 44, Basel <br>
+                    27.07.23 Jazz Chur<br>
+                    <br>
+                    Auswahl vergangener Konzerte:<br>
+                    <br>
+                    20.01.23 Jazz in Bess, Lugano<br>
+                    30.09.22 AMR Genf<br>
+                    26.09.22 ZKB Jazzpreis, Moods<br>
+                    10.07.22 Musicamorfosi Milano<br>
+                    21.01.22 SDJ: live in Vevey, Vevey<br>
+                    20.01.22 SDJ: le singe, Biel<br>
+                    28.10.21 Jazzclub Aarau <br>
+                    27.05.21 Plattentaufe: Vidmarhallen, Bern<br>
+                    25.11.20 Unerhört Festival, Zürich<br>
+                    27.12.19 Die letzten Tage, Bern<br>
+                    31.08.19 Jazzfestival Willisau<br>
+                    22.09.18 Villa Straeuli, Winterthur<br>
+                    20.04.18 Cully Jazz Festival<br>
+                    09.03.18 Café Kairo, Bern<br>
+                    17.02.18 Zum Hut, Uster <br>
+                    02.12.17 Alte Fabrik, Rapperswil<br>
+                    06.08.17 Jazz in Collias, FR<br>
+                </div>
+                <br><br>
+                Kontakt<br><br>
+
+                <a href="https://www.hannahadriana.com">
+                    Hannah Adriana Müller, voc. & vl <br>
+                </a>
+                <a href="http://sonja-ott.ch">
+                    Sonja Ott, tp<br>
+                </a>
+                <a href="https://johannapaerli.wordpress.com">
+                    Johanna Pärli, kb
+                </a>
+                <br><br>
+                <script language="JavaScript">
+                    var nase = "kontakt";
+                    var ohr = "@";
+                    var mund = "diedrei.band";
+                    document.write('<a target="_blank" class="some" href=\"mailto:' + nase + ohr + mund + '\">');
+                    document.write(nase + ohr + mund + '</a>');
+                </script>
+                <br><br>
+
+            </div>
+            <div id="content_right">
+                <div id="text_right">
+                    "mäandern" - unser neues Album ist jetzt unter Bandcamp kaufbar:
+                    <br>
+                    <br>
+                    <br>
+                    <div class="center_content">
+                        <a href="https://tiedrei.bandcamp.com/releases">
+                            <div class="button">weiter zu Bandcamp</div>
+                        </a>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+                
+                <iframe name="iframe1" id="iframe1" width="100%" height="450px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/160410109&amp;color=666666&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false" ></iframe>
+
+            </div>
+         
+           <div id="banner_end"><div class="white_background"><img src="image/tiedrei_sponsoren.jpg"></div>  </div>
+
+        </div>
+        <script>
+            function browser_height() {
+                var myHeight = 0;
+                if( typeof( window.innerHeight ) == 'number' ) {
+                    //Non-IE
+                    myHeight = window.innerHeight;
+                } else if( document.documentElement &&  document.documentElement.clientHeight  ) {
+                    //IE 6+ in 'standards compliant mode'
+                    myHeight = document.documentElement.clientHeight;
+                } else if( document.body && document.body.clientHeight ) {
+                    //IE 4 compatible
+                    myHeight = document.body.clientHeight;
+                }
+                return myHeight;
+            }
+            
+            window.addEventListener("load", resizeContainer);
+            window.addEventListener("resize", resizeContainer);
+            
+          
+            function resizeContainer(e){
+                document.getElementById("content_container").style.top = (browser_height())+"px";
+            }
+            
+
+            jQuery(
+              function() {
+                var bgv = jQuery('#bgvid');
+
+                if (bgv.is(':visible')) {
+                  jQuery('source', bgv).each(
+                    function() {
+                      var el = jQuery(this);
+                      el.attr('src', el.data('src'));
+                    }
+                  );
+
+                  bgv[0].load();
+                }
+              }
+            ) 
+
+        </script>
+    </body>
+</html>

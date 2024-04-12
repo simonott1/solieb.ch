@@ -1,0 +1,297 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+video#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(./image/background_tiedrei.jpg) no-repeat;
+    /* Background in all browsers covering */
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#logo_container, #backhome_container {
+    position: fixed;
+    right: 20px;
+    top: 8px;
+    z-index: 300;
+}
+#backhome_container{
+    left: 20px;
+    right: auto !important;
+    width: 160px;
+}
+#backhome_container p{
+    opacity: 0.7;
+}
+
+
+#logo_container img, #backhome_container img {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 7px;
+}
+#backhome_container img{
+    float: left;
+    left: 0;
+}
+
+#logo_container img{
+    right: 0px;
+    float: right;
+}
+
+#logo_container a, #backhome_container a{
+    opacity: 0.8;
+}
+
+#logo_container a:hover, #backhome_container a:hover{
+    opacity: 1.0;
+}
+
+#content_container {
+    position: absolute;
+    width: 100%;
+    min-width: 400px;
+    min-height: 500px;
+    left: 0;
+    padding: 40px 0 40px 0;
+    top: 800px;
+    background-color: rgba(240, 242, 232, 0.98);
+}
+
+#content_background {
+    opacity: 0.9;
+}
+
+#content_left {
+    display: inline-block;
+    left: 50%;
+    width: 400px;
+    position: relative;
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+    padding-bottom: 70px;
+
+}
+
+#content_right {
+    display: inline-block;
+    float: left;
+    left: 50%;
+    width: 400px;
+    height: auto;
+    position: relative;
+    padding-bottom: 70px;
+
+}
+
+#text_right {
+    margin-bottom: 20px;
+}
+
+
+
+#content_container_arrow {
+    top: -54px;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 30;
+}
+
+#content_container_arrow a {
+    opacity: 0.8;
+}
+
+#content_container_arrow a:hover {
+    opacity: 1.0;
+}
+
+.cleardiv {
+    clear: both;
+}
+
+.center_content {
+    text-align: center;
+}
+
+.button {
+
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 28px;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    padding: 16px 31px;
+    text-decoration: none;
+
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.button:active {
+    position: relative;
+    top: 1px;
+}
+
+
+#background_novideo {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./image/background_tiedrei.jpg) no-repeat center center fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+ body {
+        background: url(./image/background_tiedrei.jpeg) no-repeat center center fixed;
+
+
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+.spacer{
+    width: 100%;
+    height: 80px;
+    clear: both;
+}
+
+ /* lyrics_part */
+.background_color_only{
+    background: rgb(240, 242, 232) !important;
+}
+
+.texte_content_top{
+    top: 60px !important;
+}
+
+#banner_end{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#banner_end img{
+    width: 800px;
+    margin-left: calc(50% - 400px);
+}
+.white_background{
+    position: relative;
+    width: 100%;
+    background-color: white;
+
+}
+
+@media print {
+    /* print style sheets go here */
+}
+
+
+@media screen and (max-width: 900px) {
+    body {}
+
+    #content_container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    #content_left {
+        display: block;
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    #content_right {
+        display: block;
+        position: relative;
+        left: 50%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    
+    #banner_end{
+        left: 0;
+        width: 100%;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    
+    #banner_end img{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-device-width: 480px) {
+    #content_left {
+        width: 100;
+    }
+
+    #content_right {
+        width: 100;
+    }
+    
+    #backhome_container p{
+        display: none;
+    }
+}
+
+@media screen and (orientation:portrait) {
+
+    video#bgvid {
+        background: none;
+        display: none;
+    }
+
+   
+
+    #switch_sound_button {
+        display: none;
+    }
+
+}
