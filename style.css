@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+html { 
+    background: url(./image/background.jpg) no-repeat 20% center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
 body {
     font-family: "Albert Sans", sans-serif;
     font-optical-sizing: auto;
@@ -31,28 +39,7 @@ a {
     filter: invert(1);
 }
 
-video#bgvid {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url(./image/background.jpg) no-repeat;
-    /* Background in all browsers covering */
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
+
 
 #logo_container, #backhome_container {
     position: fixed;
@@ -60,6 +47,7 @@ video#bgvid {
     top: 8px;
     z-index: 300;
 }
+
 #backhome_container{
     left: 20px;
     right: auto !important;
@@ -70,20 +58,30 @@ video#bgvid {
 }
 
 
-#logo_container img, #backhome_container img {
+#logo_container img {
     position: relative;
-    width: 40px;
-    height: 40px;
-    margin: 7px;
+    width: 50px;
+    height: 50px;
 }
+
 #backhome_container img{
     float: left;
     left: 0;
 }
 
-#logo_container img{
+#logo_container .logo-icon-container{
+    position: relative;
     right: 0px;
     float: right;
+    background-color: rgb(241, 239, 235);
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+#logo_container img{
+    filter: invert(16%) sepia(80%) saturate(6245%) hue-rotate(245deg) brightness(68%) contrast(116%);
 }
 
 #logo_container a, #backhome_container a{
@@ -102,7 +100,7 @@ video#bgvid {
     left: 0;
     padding: 40px 0 40px 0;
     top: 800px;
-    background-color: rgb(226 223 219 / 97%);
+    background-color: rgb(226 223 219 / 98%);
     color: #1717b5;
     display: flex;
     flex-direction: row;
@@ -154,7 +152,7 @@ video#bgvid {
 }
 
 #content_container_arrow a {
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 #content_container_arrow a:hover {
@@ -267,6 +265,11 @@ video#bgvid {
     font-size: 1.2em;
 }
 
+#switch_sound_button{
+    display: none;
+}
+
+
 @media print {
     /* print style sheets go here */
 }
@@ -275,30 +278,45 @@ video#bgvid {
 @media screen and (max-width: 900px) {
     body {}
 
+    h2{
+        margin-top: 2.23em;
+    }
+
+    .detailtext{
+        margin: 40px 0;
+    }
+
     #content_container {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding: 0;
+    }
+
+    #inner_content_container {
+        padding: 0 30px 30px 30px;
     }
 
     #content_left {
         display: block;
         position: relative;
-        left: 50%;
+        width: 100%;
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
+        padding-bottom: 0;
     }
 
     #content_right {
         display: block;
+        float: none;
         position: relative;
-        left: 50%;
+        width: 100%;
         margin-top: 20px;
         margin-bottom: 20px;
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
+        padding: 0;
     }
     
     #banner_end{
+        float: default;
         left: 0;
         width: 100%;
         -webkit-transform: translateX(0);

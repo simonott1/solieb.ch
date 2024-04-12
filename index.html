@@ -13,29 +13,38 @@
     <link rel="stylesheet" type="text/css" href="gallery_style.css">
 </head>
 <body>
-    <video autoplay loop muted id="bgvid">
-        <source src="video/interlude.webm" type="video/webm">
-        <source src="video/interlude.mp4" type="video/mp4">
-    </video>
     <div id="logo_container">
         <a href="https://soundcloud.com/sonja-ott-710301069/so-lieb-quartet-trailer-ungemischt">
-            <img src="image/logo/soundcloud.png" alt="SoundCloud">
+            <div class="logo-icon-container">
+                <img src="image/logo/soundcloud.png" alt="SoundCloud">
+            </div>
         </a>
         
         <a href="https://www.instagram.com/solieb.quartet/">
-            <img src="image/logo/instagram.png" alt="Instagram">
+            <div class="logo-icon-container">
+                <img src="image/logo/instagram.png" alt="Instagram">
+            </div>
         </a>
         
         <a href="https://www.youtube.com/watch?v=lo67vt61hGM">
-            <img src="image/logo/youtube.png" alt="YouTube">
+            <div class="logo-icon-container">
+                <img src="image/logo/youtube.png" alt="YouTube">
+            </div>
         </a>
         
         <a href="#" onclick="switch_sound();" id="switch_sound_button">
-            <img id="mute_button" src="image/logo/muted.png" alt="Toggle Sound">
+            <div class="logo-icon-container">
+                <img id="mute_button" src="image/logo/muted.png" alt="Toggle Sound">
+            </div>
         </a>
     </div>
     
         <div id="content_container">
+            <div id="content_container_arrow">
+                <a href="#" onclick="scrolltocontent();" id="arrow_href">
+                    <img src="image/logo/arrow_down.png" id="arrow_img">
+                </a>
+            </div>
             <div id="inner_content_container">
                 <div id="content_left">
                     <article id="concert_dates">
