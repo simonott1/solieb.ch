@@ -1,16 +1,34 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Albert Sans", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 300;
-    font-size: 16px;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 2.3em;
+}
+
+h3{
+    font-size: 1.3em;
+}
+
+p {
+    font-size: 1.3em;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: #1717b5;
+}
+
+#soundcloud{
+    margin-top: 30px;
+    filter: invert(1);
 }
 
 video#bgvid {
@@ -24,7 +42,7 @@ video#bgvid {
     z-index: -100;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url(./image/background_tiedrei.jpg) no-repeat;
+    background: url(./image/background.jpg) no-repeat;
     /* Background in all browsers covering */
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -69,7 +87,7 @@ video#bgvid {
 }
 
 #logo_container a, #backhome_container a{
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 #logo_container a:hover, #backhome_container a:hover{
@@ -84,7 +102,15 @@ video#bgvid {
     left: 0;
     padding: 40px 0 40px 0;
     top: 800px;
-    background-color: rgba(240, 242, 232, 0.98);
+    background-color: rgb(226 223 219 / 97%);
+    color: #1717b5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#inner_content_container {
+    width: 800px;
 }
 
 #content_background {
@@ -98,8 +124,7 @@ video#bgvid {
     position: relative;
     -webkit-transform: translateX(-200%);
     transform: translateX(-200%);
-    padding-bottom: 70px;
-
+    padding-bottom: 30px;
 }
 
 #content_right {
@@ -172,7 +197,7 @@ video#bgvid {
     top: 0;
     width: 100%;
     height: 100%;
-    background: url(./image/background_tiedrei.jpg) no-repeat center center fixed;
+    /*background: url(./image/background_tiedrei.jpg) no-repeat center center fixed;*/
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -181,7 +206,7 @@ video#bgvid {
 }
 
  body {
-        background: url(./image/background_tiedrei.jpeg) no-repeat center center fixed;
+        /*background: url(./image/background_tiedrei.jpeg) no-repeat center center fixed;*/
 
 
         -webkit-background-size: cover;
@@ -221,6 +246,25 @@ video#bgvid {
     width: 100%;
     background-color: white;
 
+}
+
+.responsive-iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    height: 0;
+}
+
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.detailtext{
+    font-size: 1.2em;
 }
 
 @media print {
