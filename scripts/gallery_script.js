@@ -1,5 +1,5 @@
 let i = 0; // current slide
-let j = 4; // total slides
+let j = 5; // total slides
 
 const images = document.querySelectorAll(".image-container img");
 
