@@ -196,6 +196,12 @@ a {
     z-index: 30;
 }
 
+
+#content_container_arrow img{
+    width: 50px;
+    height: auto;
+}
+
 #content_container_arrow a {
     opacity: 0.9;
 }
