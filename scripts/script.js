@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }*/
 
     // Attach event listener to sound toggle button
-    document.getElementById('switch_sound_button').addEventListener('click', switchSound);
+    //document.getElementById('switch_sound_button').addEventListener('click', switchSound);
 
     // Scroll to content or start
     function scrollToContent() {
