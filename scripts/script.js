@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const contentContainer = document.getElementById('content_container');
 
     // Function to toggle sound
-    function switchSound() {
+    /*function switchSound() {
         bgvid.muted = !bgvid.muted;
         muteButton.src = bgvid.muted ? 'image/logo/muted.png' : 'image/logo/unmute.png';
-    }
+    }*/
 
     // Attach event listener to sound toggle button
     document.getElementById('switch_sound_button').addEventListener('click', switchSound);
@@ -47,19 +47,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     window.addEventListener('resize', resizeContainer);
     resizeContainer(); // Initial call to set container size
-
-    // Video source lazy-loading
-    function lazyLoadVideo() {
-        if (bgvid.getAttribute('data-loaded') !== 'true') {
-            const sources = bgvid.getElementsByTagName('source');
-            for (let i = 0; i < sources.length; i++) {
-                sources[i].src = sources[i].dataset.src;
-            }
-            bgvid.load();
-            bgvid.setAttribute('data-loaded', 'true');
-        }
-    }
-
-    // Call lazy load video function
-    lazyLoadVideo();
 });
