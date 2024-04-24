@@ -1,8 +1,9 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-html { 
+body { 
     background: url(./image/background.jpg) no-repeat 20% center fixed; 
+    background-color: #1717B5;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -46,20 +47,12 @@ h1{
     margin: 0;
 }
 
-#title-container p{
-    font-size: 10vw;
-    color: #c8f0fa;
-}
 
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 770px) {
     h1 {
-       font-size: 280px;
+       font-size: 160px;
     }
-    #title p{
-        font-size: 70px !important;
-    }
-
 }
 
 h2 {
