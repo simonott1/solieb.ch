@@ -320,7 +320,9 @@ a {
 
 
 @media screen and (max-width: 900px) {
-    body {}
+    body {
+        background-attachment: scroll;
+    }
 
     h2{
         margin-top: 2.23em;
