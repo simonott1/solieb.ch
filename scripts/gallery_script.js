@@ -1,5 +1,5 @@
 let i = 0; // current slide
-let j = 5; // total slides
+let j = 7; // total slides
 
 const images = document.querySelectorAll(".image-container img");
 
@@ -7,7 +7,7 @@ function next(){
     document.getElementById("content" + (i+1)).classList.remove("active");
     i = ( j + i + 1) % j;
     document.getElementById("content" + (i+1)).classList.add("active");
-    indicator( i+ 1 );
+    indicator( i + 1 );
 }
 
 function prev(){
