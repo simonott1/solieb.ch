@@ -146,6 +146,9 @@ a {
 
 #inner_content_container {
     width: 800px;
+    max-width: 100vw;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #content_background {
