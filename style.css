@@ -47,7 +47,7 @@ h1{
     line-height: 01.0em;
     filter: drop-shadow(0 0 90px rgb(0 0 0));
     margin: 0;
-    line-height: 1.2;
+    line-height: 1.4;
 }
 
 h1 b{
@@ -59,6 +59,14 @@ h1 b{
 }
 .offset_right {
     margin-left: 120px;
+}
+
+#title-container h2{
+    font-weight: 100;
+    font-size: 24px;
+    margin: 0;
+        filter: drop-shadow(0 0 90px rgb(0 0 0));
+
 }
 
 .orange, .orange a {
