@@ -61,12 +61,17 @@ h1 b{
     margin-left: 120px;
 }
 
+.title_names {
+    /*float: left;
+    position: absolute;
+    transform: translate(5px, -10px);*/
+}
+
 #title-container h2{
     font-weight: 100;
     font-size: 24px;
     margin: 0;
-        filter: drop-shadow(0 0 90px rgb(0 0 0));
-
+    filter: drop-shadow(0 0 90px rgb(0 0 0));
 }
 
 .orange, .orange a {
